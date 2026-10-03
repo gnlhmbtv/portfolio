@@ -13,7 +13,7 @@ export function ProjectPage() {
   if (!project) {
     return (
       <main className="project-page">
-        <Link className="back-link" to="/#works">
+        <Link className="back-link" to={{ pathname: '/', hash: 'works' }}>
           {labels.back}
         </Link>
         <h1>{labels.notFoundTitle}</h1>
@@ -27,7 +27,7 @@ export function ProjectPage() {
 
   return (
     <main className="project-page">
-      <Link className="back-link" to="/#works">
+      <Link className="back-link" to={{ pathname: '/', hash: 'works' }}>
         {labels.back}
       </Link>
 

@@ -46,7 +46,8 @@ export function Layout({ children }: LayoutProps) {
     setLangOpen(false)
   }
 
-  const sectionHref = (id: string) => (isHome ? `#${id}` : `/#${id}`)
+  const base = import.meta.env.BASE_URL.replace(/\/$/, '')
+  const sectionHref = (id: string) => (isHome ? `#${id}` : `${base}/#${id}`)
 
   return (
     <div className="page">
